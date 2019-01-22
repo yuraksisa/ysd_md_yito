@@ -16,6 +16,7 @@ module Yito
     
         query_options = {}
       
+        query_options.store(:fields, options[:fields]) if options.has_key?(:fields)
         query_options.store(:limit, options[:limit] || 10)
         query_options.store(:offset, options[:offset] || 0)
         query_options.store(:order, options[:order])
